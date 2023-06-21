@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather-App</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="./weather-ico/1/2.svg" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+	
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="wrapper__header">
+			<div class="header__burger-locatoion">
+
+			<div class="header__location">
+				<div class="header__location-ico">
+					<img src="./weather-ico/theme--icon/icons8-location-50 (1).png">
+				</div>
+				<div class="header__location-txt">
+					New York
+				</div>
+			</div>
+			</div>
+
+			<div class="header__search activity__element">
+				<img src="./weather-ico/theme--icon/icons8-search-50.png" class="search__ico"></img>
+				<form class="form__header">
+					<input  type="text" placeholder="Search city..." class="header__search-inp activity__element">
+					
+				</form>
+				<div class="header__search-error">Не найдено!!!</div>
+			</div>
+			
+		</div>
+		<div class="wrapper__body">
+			<div class="wrapper__main main">
+				<div class="main__weather">
+					<div class="weather__top">
+						<div class="weather__top-left">
+							<button class="weather__top-today weather__top-switch" style="color:#fff;">Today</button>
+							<button class="weather__top-tomorrow weather__top-switch">Tomorrow</button>
+							<button class="weather__top-next weather__top-switch">Next 7 days</button>
+						</div>
+						<div class="weather__top-img activity__element"><img class="weather__top-img-btn" src="./weather-ico/theme--icon/icons8-menu-vertical-50.png"></div>
+						<ul class="activity__element weather__top-left-mobile">
+							<li><button class="weather__top-today-mobile weather__top-switch-mobile" style="color:#fff;">Today</button></li>
+							<li><button class="weather__top-tomorrow-mobile weather__top-switch-mobile">Tomorrow</button></li>
+							<li><button class="weather__top-next-mobile weather__top-switch-mobile" >Next 7 days</button></li>
+						</ul>
+						<div class="weather__top-right activity__element">
+							<div class="weather__top-dominated"></div>
+							<div class="weather__top-buttons">
+								<div class="weather__top-forecast block__active">Forecast</div>
+								<div class="weather__top-air block__hide">Air quality</div>								
+							</div>
+
+						</div>
+					</div>
+
+					<div class="weather__blocks">
+						<div class="weather__days">
+							<div class="days">
+								<div class="day-today">
+									<div class="today__top-card">
+										<div class="day__week">Monday</div>
+										<div class="today__time cubic-txt"></div>
+									</div>
+									<div class="today__body-card">
+										<div class="today__basic">
+											<div class="today__temp day__temp-node  cubic-txt">0</div>
+											<div class="today__img-block"><img class="day__img"></div>
+										</div>
+										<div class="today__all">
+											<div class="today__real-temp">Real Feel <p class="today__real-temp-out">NAN</p></div>
+											<div class="today__humidity">Humidity <p class="today__humidity-out">NAN</p></div>
+											<div class="today__pressure">Pressure <p class="today__pressure-out">NAN</p></div>
+											<div class="today__wind">Wind <p class="today__wind-out">NAN</p></div>
+
+										</div>
+									</div>
+								</div>
+								<div class="day activity__element">
+									<div class="day__week day__week-after">Tue</div>
+									<div class="day__img-block"><img class="day__img" ></div>
+									<div class="day__temp day__temp-node cubic-txt">12°</div>
+								</div>
+								<div class="day activity__element">
+									<div class="day__week day__week-after">Tue</div>
+									<div class="day__img-block"><img class="day__img" ></div>
+									<div class="day__temp day__temp-node cubic-txt">12°</div>
+								</div>
+								<div class="day activity__element">
+									<div class="day__week day__week-after">Tue</div>
+									<div class="day__img-block"><img class="day__img" ></div>
+									<div class="day__temp day__temp-node cubic-txt">12°</div>
+								</div>
+								<div class="day activity__element">
+									<div class="day__week day__week-after">Tue</div>
+									<div class="day__img-block"><img class="day__img" ></div>
+									<div class="day__temp day__temp-node cubic-txt">12°</div>
+								</div>
+								<div class="day activity__element">
+									<div class="day__week day__week-after">Tue</div>
+									<div class="day__img-block"><img class="day__img"></div>
+									<div class="day__temp day__temp-node cubic-txt">12°</div>
+								</div>
+								<div class="day activity__element">
+									<div class="day__week day__week-after">Tue</div>
+									<div class="day__img-block"><img class="day__img" ></div>
+									<div class="day__temp day__temp-node cubic-txt">12°</div>
+								</div>
+								
+							</div>
+						
+						</div>
+
+						<div class="weather__today today__detail">
+							<div class="td__basic-section">
+								<div class="td__basic activity__element">
+									<div class="today-tomorrow-top">
+										<div class="tg__basic-date">Right now</div>
+										<div class="tg__basic-time">12:00</div>
+									</div>
+									<div class="td__basic-all">
+										<div class="td__basic-big">
+											<div class="td__basic-temp today-tomorrow-temp cubic-txt">14°</div>
+											<div class="td__basic-img today-tomorrow-img"><img src="./weather-ico/1/45.svg" alt="" srcset=""></div>	
+										</div>
+										<div class="td__basic-subtitle">
+											<div class="td__basic-realtemp-pressure">
+												<div class="td__basic-realtemp today-tomorrow-realtemp">Real Feel <span>12°</span></div>
+												<div class="td__basic-sunrise today-tomorrow-sunrise">Sunrise <span>12:00</span></div>
+												<div class="td__basic-sunset today-tomorrow-sunset">Sunset <span>4:00</span></div>
+											</div>	
+										</div>
+									</div>
+								</div>
+								<div class="td__basic-mobile">
+									<div class="basic-mobile__top">
+										<div class="basic-mobile-img"><img src="./weather-ico/1/45.svg" alt="" srcset=""></div>
+										<div class="basic-mobile-temp mobile__td-temp cubic-txt">14°</div>	
+									</div>
+									<div class="basic-mobile__all">
+										<div class="basic-mobile-realtemp basic-mobile-item">
+											<div class="mobile__item-row">
+												<div class="mobile__item-attrrebute">Real Feel</div> <div class="mobile__td-realtemp">12°</div>
+											</div>
+										</div>
+
+										<div class="basic-mobile-sunrise basic-mobile-item">
+											<div class="mobile__item-row">
+												<div class="mobile__item-attrrebute">Sunrise</div> <div class="mobile__td-sunrise">6:00</div>
+											</div>
+										</div>
+										<div class="basic-mobile-sunset basic-mobile-item">
+											<div class="mobile__item-row">
+												<div class="mobile__item-attrrebute">Sunset</div> <div class="mobile__td-sunset">18:00</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="tg__section">
+									<div class="tg__wind-uvindex">
+										<div class="td__wind activity__element">
+											<div class="today-tomorrow-parametrs">
+												<div class="td__wind-speed">Speed:16km/h</div>
+												<div class="td__wind-direction">Direction:W/A</div>
+											</div>
+											<div class="td__wind-hovers">
+												<div class="td__wind-compass"><img src="./weather-ico/theme--icon/Mediamodifier-Design (5).svg" alt="" srcset=""></div>
+												<div class="td__wind-arrow"><img src="./weather-ico/theme--icon/Mediamodifier-Design (4).svg" alt="" srcset=""></div>
+											</div>
+										</div>
+										<div class="tg__uv-index activity__element">
+											<div class="uv__index-title">
+												UV-index
+											</div>
+											
+											<div class="uv__index-bar">
+												<div class="uv__index-out circle__out">6</div>
+												<svg class="uv__index-box circle-svg" width="65" height='65'> 
+													<circle class="uv__index-box-circle circle__box" fill="transparent" stroke="white" stroke-width="2.5" cx="32.5" cy="32.5" r="29.5"/>
+													<circle class="uv__index-box-circle-max circle__box-max" fill="transparent" stroke="white" stroke-width=".2" cx="32.5" cy="32.5" r="29.5"/>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="tg__humidity-cloud">
+										<div class="tg__humidity activity__element">
+											<div class="humidity__title">Humidity</div>
+											<div class="humidity__circle">
+												<div class="humidity-out circle__out">24%</div>
+												<svg class="humidity-box circle-svg" width="65" height='65'> 
+													<circle class="humidity-box-circle circle__box" fill="transparent" stroke="white" stroke-width="2.5" cx="32.5" cy="32.5" r="29.5"/>
+													<circle class="humidity-box-circle-max circle__box-max" fill="transparent" stroke="white" stroke-width=".2" cx="32.5" cy="32.5" r="29.5"/>
+												</svg>
+											</div>
+									</div>
+									<div class="tg__cloud activity__element">
+										<div class="cloud__title">CloudCover</div>
+										<div class="cloud__circle">
+											<div class="cloud__out circle__out">43%</div>
+											<svg class="cloud__box circle-svg" width="65" height='65'> 
+												<circle class="cloud__box-circle circle__box" fill="transparent" stroke="white" stroke-width="2.5" cx="32.5" cy="32.5" r="29.5"/>
+												<circle class="cloud__box-circle-max circle__box-max" fill="transparent" stroke="white" stroke-width=".2" cx="32.5" cy="32.5" r="29.5"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+								</div>	
+							</div>
+						
+							<div class="block__rain-hourly-day">
+								<div class="other__rain chance-rain mobile__rain">
+									<div class="rain__title ">Chance of rain</div>
+									<div class="rain__body cubic-txt">
+										<div class="rain__parametrs">
+											<div class="rain__parametr">
+												<div class="parametr__title">100%</div>
+												<div class="parametr__line">----------------------------------------------------------------------------------------------</div>
+											</div>
+											<div class="rain__parametr">
+												<div class="parametr__title">50%</div>
+												<div class="parametr__line">---------------------------------------------------------------------------------------------------</div>
+											</div>
+											<div class="rain__parametr">
+												<div class="parametr__title">0%</div>
+												<div class="parametr__line">---------------------------------------------------------------------------------------------</div>
+											</div>
+										</div>
+										<div class="rain__values">
+											<div class="rain__value">
+												<div class="value__line-mobile"></div>
+												<div class="value__time-mobile"></div>
+											</div>
+											<div class="rain__value">
+												<div class="value__line-mobile"></div>
+												<div class="value__time-mobile"></div>
+											</div>
+											<div class="rain__value">
+												<div class="value__line-mobile"></div>
+												<div class="value__time-mobile"></div>
+											</div>
+											<div class="rain__value">
+												<div class="value__line-mobile"></div>
+												<div class="value__time-mobile"></div>
+											</div>
+											<div class="rain__value">
+												<div class="value__line-mobile"></div>
+												<div class="value__time-mobile"></div>
+											</div>
+											<div class="rain__value">
+												<div class="value__line-mobile"></div>
+												<div class="value__time-mobile"></div>
+											</div>
+										</div>
+									</div>
+								</div>	
+								<div class="tg__hourly-today activity__element">
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+									<div class="today-tomorrow-hour">
+										<div class="today__hour-time today-tomorrow-hour-time"></div>
+										<div class="today__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+										<div class="today__hour-temp today-tomorrow-hour-temp">12°</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ЗАВТРА -->
+						<div class="weather__tomorrow">
+							<div class="td__basic-section">
+								<div class="td__basic activity__element">
+									<div class="today-tomorrow-top">
+										<div class="tm__basic-date">Monday</div>
+									</div>
+									<div class="td__basic-all">
+										<div class="td__basic-big">
+											<div class="tm__basic-temp today-tomorrow-temp cubic-txt">14°</div>
+											<div class="tm__basic-img today-tomorrow-img"></div>	
+										</div>
+										<div class="td__basic-subtitle">
+											<div class="td__basic-realtemp-pressure">
+												<div class="tm__basic-realtemp today-tomorrow-realtemp">Real Feel <span>12°</span></div>
+												<div class="tm__basic-sunrise today-tomorrow-sunrise">Sunrise <span>12:00</span></div>
+												<div class="tm__basic-sunset today-tomorrow-sunset">Sunset <span>4:00</span></div>
+											</div>	
+										</div>
+									</div>
+								</div>
+								<div class="td__basic-mobile">
+									<div class="basic-mobile__top">
+										<div class="basic-mobile-img basic-mobile-img-tm"></div>
+										<div class="basic-mobile-temp mobile__tm-temp cubic-txt">14°</div>	
+									</div>
+									<div class="basic-mobile__all">
+										
+										<div class="basic-mobile-realtemp basic-mobile-item">
+											<div class="mobile__item-row">
+												<div class="mobile__item-attrrebute">Real Feel</div> <div class="mobile__tm-realtemp">12°</div>
+											</div>
+										</div>
+										<div class="basic-mobile-sunrise basic-mobile-item">
+											<div class="mobile__item-row">
+												<div class="mobile__item-attrrebute">Sunrise</div> <div class="mobile__tm-sunrise"></div>
+											</div>
+										</div>
+										<div class="basic-mobile-sunset basic-mobile-item">
+											<div class="mobile__item-row">
+												<div class="mobile__item-attrrebute">Sunset</div> <div class="mobile__tm-sunset"></div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="tg__section">
+									<div class="tg__wind-uvindex">
+										<div class="td__wind activity__element">
+											<div class="today-tomorrow-parametrs">
+												<div class="tm__wind-speed">Speed:16km/h</div>
+												<div class="tm__wind-direction">Direction:W/A</div>
+											</div>
+											<div class="td__wind-hovers">
+												<div class="td__wind-compass"><img src="./weather-ico/theme--icon/Mediamodifier-Design (5).svg" alt="" srcset=""></div>
+												<div class="tm__wind-arrow"><img src="./weather-ico/theme--icon/Mediamodifier-Design (4).svg" alt="" srcset=""></div>
+											</div>
+										</div>
+										<div class="tg__uv-index activity__element">
+											<div class="uv__index-title">
+												UV-index
+											</div>
+											
+											<div class="uv__index-bar">
+												<div class="uv__index-out-tomorrow circle__out">6</div>
+												<svg class="uv__index-box circle-svg" width="65" height='65'> 
+													<circle class="uv__index-box-circle-tomorrow circle__box" fill="transparent" stroke="white" stroke-width="2.5" cx="32.5" cy="32.5" r="29.5"/>
+													<circle class="uv__index-box-circle-max circle__box-max" fill="transparent" stroke="white" stroke-width=".2" cx="32.5" cy="32.5" r="29.5"/>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="tg__humidity-cloud">
+										<div class="tg__humidity activity__element">
+											<div class="humidity__title">Humidity</div>
+											<div class="humidity__circle">
+												<div class="humidity-out-tomorrow circle__out">24%</div>
+												<svg class="humidity-box circle-svg" width="65" height='65'> 
+													<circle class="humidity-box-circle-tomorrow circle__box" fill="transparent" stroke="white" stroke-width="2.5" cx="32.5" cy="32.5" r="29.5"/>
+													<circle class="humidity-box-circle-max circle__box-max" fill="transparent" stroke="white" stroke-width=".2" cx="32.5" cy="32.5" r="29.5"/>
+												</svg>
+											</div>
+									</div>
+									<div class="tg__cloud activity__element">
+										<div class="cloud__title">CloudCover</div>
+										<div class="cloud__circle">
+											<div class="cloud__out-tomorrow circle__out">43%</div>
+											<svg class="cloud__box circle-svg" width="65" height='65'> 
+												<circle class="cloud__box-circle-tomorrow circle__box" fill="transparent" stroke="white" stroke-width="2.5" cx="32.5" cy="32.5" r="29.5"/>
+												<circle class="cloud__box-circle-max circle__box-max" fill="transparent" stroke="white" stroke-width=".2" cx="32.5" cy="32.5" r="29.5"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+								</div>	
+							</div>
+						
+						<div class="block__rain-hourly-day">
+							<div class="tg__hourly-today activity__element">
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+								<div class="today-tomorrow-hour">
+									<div class="tomorrow__hour-time today-tomorrow-hour-time"></div>
+									<div class="tomorrow__hour-wether today-tomorrow-hour-weather"><img src="./weather-ico/1/53.svg" alt=""></div>
+									<div class="tomorrow__hour-temp today-tomorrow-hour-temp">12°</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+					<div class="wether__air air" >
+						<div class="air__today">
+							<div class="air__box-svg">
+								<svg class="air__svg " > 
+									<circle class="air__svg-ind" fill="transparent"  stroke-width="7" stroke-linecap="round" cx="50%" cy="50%" r="42%"/>
+									<circle class="air__svg-max" fill="transparent" stroke="#D9D9D9"  stroke-width="7" stroke-linecap="round" cx="50%" cy="50%" r="42%"/>
+								</svg>
+							</div>
+							<div class="air__title">AQI</div>
+							<div class="air__aqi-index"></div>
+							<div class="air__aqi-value"></div>
+						</div>
+						<div class="air__quality-blocks">
+							<div class="air__quality-row">
+								<div class="air__quality-element activity__element quality-element">
+									<div class="quality__element-left">
+										<div class="quality__element-title">PM<span class="quality__title-c">2.5</span><p>(Particles<2.5µm)</p></div>
+										<div class="quality__element-value">Poor</div>
+										<div class="quality__element-volume">17.59 μg/m<span>3</span></div>									
+									</div>
+									<div class="quality__element-right">
+										<svg class="quality__svg" > 
+											<circle class="quality__svg-ind quality__svg-ind-pm1" fill="transparent"  stroke-width="4" stroke-linecap="round"  stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+											<circle class="quality__svg-max" fill="transparent" stroke="#D9D9D9"  stroke-width="4" stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+										</svg>
+										<h4 class="quality__title">17</h4>
+									</div>
+								</div> 
+								<div class="air__quality-element activity__element quality-element">
+									<div class="quality__element-left">
+										<div class="quality__element-title">O<span class="quality__title-c">3</span><p>(Ozone)</p></div>
+										<div class="quality__element-value">Poor</div>
+										<div class="quality__element-volume">17.59 μg/m<span>3</span></div>									
+									</div>
+									<div class="quality__element-right">
+										<svg class="quality__svg" > 
+											<circle class="quality__svg-ind quality__svg-ind-o" fill="transparent"  stroke-width="4" stroke-linecap="round"  stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+											<circle class="quality__svg-max" fill="transparent" stroke="#D9D9D9"  stroke-width="4" stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+										</svg>
+										<h4 class="quality__title">17</h4>
+									</div>
+								</div> 
+							</div>
+							<div class="air__quality-row">
+								<div class="air__quality-element activity__element quality-element">
+									<div class="quality__element-left">
+										<div class="quality__element-title">PM<span class="quality__title-c">10</span><p>(Particles<10µm)</p></div>
+										<div class="quality__element-value">Poor</div>
+										<div class="quality__element-volume">17.59 μg/m<span>3</span></div>									
+									</div>
+									<div class="quality__element-right">
+										<svg class="quality__svg" > 
+											<circle class="quality__svg-ind quality__svg-ind-pm2" fill="transparent"  stroke-width="4" stroke-linecap="round"  stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+											<circle class="quality__svg-max" fill="transparent" stroke="#D9D9D9"  stroke-width="4" stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+										</svg>
+										<h4 class="quality__title">17</h4>
+									</div>
+								</div> 
+								<div class="air__quality-element activity__element quality-element">
+									<div class="quality__element-left">
+										<div class="quality__element-title">NO<span class="quality__title-c">2</span><p>(Nitrogen Dioxide)</p></div>
+										<div class="quality__element-value">Poor</div>
+										<div class="quality__element-volume">17.59 μg/m<span>3</span></div>									
+									</div>
+									<div class="quality__element-right">
+										<svg class="quality__svg" > 
+											<circle class="quality__svg-ind quality__svg-ind-no" fill="transparent"  stroke-width="4" stroke-linecap="round"  stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+											<circle class="quality__svg-max" fill="transparent" stroke="#D9D9D9"  stroke-width="4" stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+										</svg>
+										<h4 class="quality__title">17</h4>
+									</div>
+								</div> 
+							</div>
+							<div class="air__quality-row">
+								<div class="air__quality-element activity__element quality-element">
+									<div class="quality__element-left">
+										<div class="quality__element-title">SO<span class="quality__title-c">2</span><p>(Sulfur Dioxide)</p></div>
+										<div class="quality__element-value">Poor</div>
+										<div class="quality__element-volume">17.59 μg/m<span>3</span></div>									
+									</div>
+									<div class="quality__element-right">
+										<svg class="quality__svg" > 
+											<circle class="quality__svg-ind quality__svg-ind-so" fill="transparent"  stroke-width="4" stroke-linecap="round"  stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+											<circle class="quality__svg-max" fill="transparent" stroke="#D9D9D9"  stroke-width="4" stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+										</svg>
+										<h4 class="quality__title">17</h4>
+									</div>
+								</div> 
+								<div class="air__quality-element activity__element quality-element">
+									<div class="quality__element-left">
+										<div class="quality__element-title">CO<span class="quality__title-c"></span><p>(Carbon Monoxide)</p></div>
+										<div class="quality__element-value">Poor</div>
+										<div class="quality__element-volume">17.59 μg/m<span>3</span></div>									
+									</div>
+									<div class="quality__element-right">
+										<svg class="quality__svg" > 
+											<circle class="quality__svg-ind quality__svg-ind-co" fill="transparent"  stroke-width="4" stroke-linecap="round"  stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+											<circle class="quality__svg-max" fill="transparent" stroke="#D9D9D9"  stroke-width="4" stroke-linecap="round" cx="50%" cy="50%" r="40%"/>
+										</svg>
+										<h4 class="quality__title">17</h4>
+									</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__map map">
+					<div class="map__top">
+						<div class="map__title">Global map</div>
+					</div>
+					<div class="map__window" id="map">
+						<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44565759.856463246!2d17.356636139046877!3d47.0190716596268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1685659836306!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+					</div>
+				</div>
+			</div>
+			<div class="wrapper__other other">
+				<div class="other__rain chance-rain">
+					<div class="rain__title ">Chance of rain</div>
+					<div class="rain__body cubic-txt">
+						<div class="rain__parametrs">
+							<div class="rain__parametr">
+								<div class="parametr__title">100%</div>
+								<div class="parametr__line">-----------------------------</div>
+							</div>
+							<div class="rain__parametr">
+								<div class="parametr__title">50%</div>
+								<div class="parametr__line">-----------------------------</div>
+							</div>
+							<div class="rain__parametr">
+								<div class="parametr__title">0%</div>
+								<div class="parametr__line">-----------------------------</div>
+							</div>
+						</div>
+						<div class="rain__values">
+							<div class="rain__value">
+								<div class="value__line"></div>
+								<div class="value__time"></div>
+							</div>
+							<div class="rain__value">
+								<div class="value__line"></div>
+								<div class="value__time"></div>
+							</div>
+							
+							<div class="rain__value">
+								<div class="value__line"></div>
+								<div class="value__time"></div>
+							</div>
+							
+							<div class="rain__value">
+								<div class="value__line"></div>
+								<div class="value__time"></div>
+							</div>
+							<div class="rain__value">
+								<div class="value__line"></div>
+								<div class="value__time"></div>
+							</div>
+							<div class="rain__value">
+								<div class="value__line"></div>
+								<div class="value__time"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="other__history history">
+					<div class="history__top">
+						<div class="history__title">Search history</div>
+					</div>
+					<div class="history__items">
+
+						<div class="history__empty">
+							<div class="history__empty-txt">So far it's empty</div>
+							<div class="history__empty-img">&#x1F60E;</div>
+						</div>
+						
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0q0dF2DEq1JfdN8RCjzUkzsY-kcvdf3w"></script>
+	<script	script src="./scrypt.js">
+		
+	</script>
+	
+	
+
+</body>
+</html>
